@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+  </head>
+  <style>body
+    {
+	    margin:0px;
+	    background-color:#f26724;
+	    background-image:url(image/background.jpg);
+	    color:#f9fcf5;
+	    font-family:Arial, Helvetica, sans-serif;
+    }
+    
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:50px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #f26724; color:black; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+    #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #f26724; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{
+	background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; 
+	}
+
+
+	
+.navbar{ overflow: hidden;
+		border-radius: 25px;
+        float: none;
+        margin: 10px;
+        background: #4fa3a5;        
+      }
+      .navbar ul{
+        list-style: none;
+
+      }
+      .navbar li a{
+        float:right;
+        color:rgb(12, 2, 16);
+        text-align: center;
+        font-style: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 3px;
+       
+        
+      }
+      .navbar a:hover{
+        color:#d4145a;
+    
+    }
+
+    .logo{
+    padding-right: 120px;
+    letter-spacing: 1px;
+}
+    </style>
+
+	<body>
+
+		<div>
+			<nav class="navbar" style="height: 35px;">
+				<ul class="logo" style="margin-top: 2px">
+				  <li><a href="" style="padding-left: 25px">Register</a></li>
+				  <li><a href="" style="padding-left: 25px">About</a></li>
+				  <li><a href="index.html">Home</a></li>
+				  <li style="float:left;"><a href="#" style="font-size: large ;font-family: Verdana, Geneva, Tahoma, sans-serif; ; margin-left: 10px;"></a>Anokha Techno-Cultural Fest</a></li>
+				</ul>
+		</nav>
+		</div>
+
+
+
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>Anokha 2023 Registration Form</h2>
+	</div>
+	<form>
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td align="right">Enter Name :</td>
+	<td><input type="text" placeholder="Enter user here" class="tb" /></td>
+	</tr>
+	<tr>
+	<td align="right">Enter Email ID :</td>
+	<td><input type="text" placeholder="Enter Email ID here" class="tb" id="email" /></td>
+	</tr>
+	<tr>
+		<td align="right">Mobile no :</td>
+		<td><input type="text" placeholder="Enter number here" class="tb" id="phone" /></td>
+		</tr>
+	<tr>
+	<td align="right">Enter College Name :</td>
+	<td><input type="text" placeholder="Enter College here" class="tb" /></td>
+	</tr>
+	
+	<tr>
+	<td align="right"> Branch :</td>
+	<td>
+	<select name="branch"; class="tb">
+		<option selected="" value="Default">(Please select a Branch)</option>
+		<option value="AF">EEE</option>
+		<option value="AL">AIE</option>
+		<option value="DZ">CSE</option>
+		<option value="AS">CYS</option>
+		<option value="AD">ECE</option>
+	  </select>
+	</td>
+	</tr>
+	<tr>
+    <td align="right">Gender :</td>
+	<td>
+        <input type="radio" name="gender" value="Male" />Male
+        <input type="radio" name="gender" value="Female" />Female
+	</td>
+	</tr>
+	<tr>
+	
+		<td align="right"><label >Need Accomodation :</label></td>
+			<td><input type="radio" name="accomodation" value="en" checked /><span>Yes</span>
+			<input type="radio" name="accomodation" value="noen" /><span>No</span>
+			</td>	
+	</tr>
+	
+	<tr><td align="right"><label for="profile-picture">Upload a profile picture :</label></td>
+        <td><input id="profile-picture" type="file" name="file" />
+	</td></tr>
+
+		
+	</table>
+	</div>
+	<p style="margin-left: 200px;">
+		<input type="reset" value="Clear Form" id="res" class="btn" />
+		<input type="submit" value="Register" class="btn" onclick="validatePhoneno(),validateEmail()"/></p>
+
+	</form>
+	<!-- create account box ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+    
+</body>
+
+	<script>
+	function validatePhoneno() {
+    	let phone = document.getElementById("phone").value;
+    	if(!(phone.length==10)){
+			window.alert("Enter valid mobile number.");
+			document.getElementById("phone").focus()
+		}
+	}
+	
+
+	function validateEmail() {
+     	var maill= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    	var mail = document.getElementById("email").value;
+    	if (!mail.match(maill)) {
+        	alert("Please enter a valid email address.");
+        	document.getElementById("email").focus()
+		}
+	}
+	</script>
+</html>
+
