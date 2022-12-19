@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>Anokha 2023</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -17,7 +18,7 @@ html {
   box-sizing: inherit;
 }
 
-.column {
+.column {   
   float: left;
   width: 33.3%;
   margin-bottom: 16px;
@@ -26,18 +27,29 @@ html {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #d4145a;
   margin: 8px;
 }
 
-.about-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #474e5d;
-  color: white;
+.about-section-img{
+  background-image:url(./img/5.jpg); 
+  background-blend-mode:luminosity;
+  background-repeat: no-repeat;
+  background-size: 100% 170%;
+     
 }
+
+.about-section-text{
+  padding: 115px;
+  padding-top: 20px;
+  text-align: center;
+  /* background-color: #4fa3a5; */
+}
+  
 
 .container {
   padding: 0 16px;
+  background-color: #4fa3a5;
 }
 
 .container::after, .row::after {
@@ -47,7 +59,7 @@ html {
 }
 
 .title {
-  color: grey;
+  color: rgb(168, 99, 99);
 }
 
 .button {
@@ -62,9 +74,46 @@ html {
   width: 100%;
 }
 
+
+
 .button:hover {
-  background-color: #555;
+  background-color: #4fa3a5;
 }
+
+.navbar{ overflow: hidden;
+        
+        border-radius: 25px;
+        float: none;
+        margin: 10px;
+        background: #4fa3a5;        
+      }
+      .navbar ul{
+        list-style: none;
+
+      }
+      .navbar li a{
+  
+        float:right;
+        color:rgb(12, 2, 16);
+        text-align: center;
+        font-style: none;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 3px;
+       
+        
+      }
+      .navbar a:hover{
+        color:#d4145a;
+    
+    }
+
+    .logo{
+    padding-right: 120px;
+    letter-spacing: 1px;
+}
+
 
 @media screen and (max-width: 650px) {
   .column {
@@ -76,22 +125,40 @@ html {
 </head>
 <body>
 
-<div class="about-section">
-  <h1>Anokha Techno-Cultural Fest</h1>
-  <p>
-The School of Engineering, Amrita Vishwa Vidyapeetham, Coimbatore campus, organized the 11th National-level Techfest, Anokha 2023,  from February 13-15, 2023.</p>
-  <!--<p>Resize the browser window to see that this page is responsive by the way.</p>-->
+  <div>
+    <nav class="navbar" style="height: 35px;">
+        <ul class="logo" style="margin-top: 2px">
+          <li><a href="./signup.html" style="padding-left: 25px">Register</a></li>
+          <li><a href="" style="padding-left: 25px">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li style="float:left;"><a href="#" style="font-size: x-large ;font-family:Verdana, Geneva, Tahoma, sans-serif; margin-left: 20px; padding-top: -2px;">Anokha Techno-Cultural Fest</a></li>
+        </ul>
+</nav>
 </div>
+<br>
 
-<h2 style="text-align:center">Anokha's Beauty</h2>
+<div class="about-section-img">
+ <div class="about-section-text">
+ 
+  <h1>Anokha Techno-Cultural Fest</h1>
+  
+ </div>
+</div>
+<!-- <br><Br><Br>
+<br>
+<h2 style="color:#d4145a ; text-align: center;">Anokha's Beauty</h2><br><br> -->
+<br>
+<p style="text-align: center; color: #d4145a;"><b>
+  The School of Engineering, Amrita Vishwa Vidyapeetham, Coimbatore campus, organized the 11th National-level Techfest, Anokha 2023, from<br> February 13-15, 2023.</b></p>
+ <br> 
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="D:\Clg\Sem 3\UI\extra\amZhkLRT0avvqaZvO2OA_Amrita.png" alt="details" style="margin-right: -5px; width: 100%; height: 250px;">
+      <img src="./img/81230038_3105554499474425_6160236726108291072_n.jpg" alt="details" style="width:100%">
       <div class="container">
         <h2>Anokha 2023</h2>
-        <p class="title">Info</p>
-        <p>Anokha Techfest, the annual event of Amrita School of Engineering, Coimbatore provides an unique opportunity for students to participate in fun-filled and challenging events and workshops. The event throws open opportunities for students from all disciplines to challenge themselves and foster the “Can Do” attitude. One of the key highlights of the Anokha 2020 edition was the Green Anokha concept. It was so wonderful to see the students adopt and implement our Chancellor AMMA’s idea of “Living in Harmony with Nature”. It was plastic-free and eco-friendly Anokha – an initiative that will become a tradition!!”, Dr. Sasangan Ramanathan, Dean, Faculty of Engineering, Amrita Vishwa Vidyapeetham.</p>
+        <p class="title;" ; style="color: #d4145a; font-size: 21px;">Info</p>
+        <p style="color: white">Anokha Techfest, the annual event of Amrita School of Engineering, Coimbatore provides an unique opportunity for students to participate in fun-filled and challenging events and workshops. The event throws open opportunities for students from all disciplines to challenge themselves and foster the “Can Do” attitude. One of the key highlights of the Anokha 2020 edition was the Green Anokha concept. It was so wonderful to see the students adopt and implement our Chancellor AMMA’s idea of “Living in Harmony with Nature”. It was plastic-free and eco-friendly Anokha – an initiative that will become a tradition!!”, Dr. Sasangan Ramanathan, Dean, Faculty of Engineering, Amrita Vishwa Vidyapeetham.</p>
         
       
       </div>
@@ -101,11 +168,11 @@ The School of Engineering, Amrita Vishwa Vidyapeetham, Coimbatore campus, organi
   
   <div class="column">
     <div class="card">
-      <img src="D:\Clg\Sem 3\UI\extra\50012-1.jpg" alt="event pic" style=" margin-right: -5px; width: 100%; height: 250px;">
+      <img src="./img/anokha-2019-techfest23.jpg" alt="event pic" style="width:100%;height: 268px;">
       <div class="container">
         <h2>Events</h2>
-        <p class="title">Explore</p>
-        <p>50 highly competitive events in all branches of engineering, gaming and robotics. Popular contests and competitions included Robowarz, Amrita’s version of Battlebots, Death race, Autonomous robots & Drone challenge, Arduino U know, Hydropowered Rocket, Paper wings, Robosoccer, King of Concrete and master of circuits.</p>
+        <p class="title"; style="color: #d4145a; font-size: 19px;">Explore</p>
+        <p style="color: white">50 highly competitive events in all branches of engineering, gaming and robotics. Popular contests and competitions included Robowarz, Amrita’s version of Battlebots, Death race, Autonomous robots & Drone challenge, Arduino U know, Hydropowered Rocket, Paper wings, Robosoccer, King of Concrete and master of circuits.</p>
        
         <p><button class="button">All events</button></p>
       </div>
@@ -116,19 +183,30 @@ The School of Engineering, Amrita Vishwa Vidyapeetham, Coimbatore campus, organi
 
   <div class="column">
     <div class="card">
-      <img src="D:\Clg\Sem 3\UI\extra\07REAL2_SPAN-articleLarge.webp" alt="Gallery" style="margin-right: -5px; width: 100%; height: 250px;">
+      <img src="./img/collage1.jpg" alt="Gallery" style="width:100%">
       <div class="container">
         <h2>Gallery</h2>
         <p class="title"></p>
-        <p>Look previous year momentos</p>
+        <p style="color: white">Look previous year momentos</p>
         
         <p><button class="button">All photos</button></p>
       </div>
     </div>
   </div>
+  <br><br>
+
+
+ 
+
   
+  </body>
 
   
   </body>
 </html>
+
+<!--##########################################################################
+-->
+
+
 
