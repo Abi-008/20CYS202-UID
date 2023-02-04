@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-   <link rel='icon' href='./img/fav.png'>
-<!--     <link rel="icon" type="image/x-icon" href="LOGO.png"> -->
+
+    <link rel="icon" type="image/x-icon" href="../img/fav.png">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -144,7 +144,7 @@ input[type=text], input[type=password] {
     <form class="modal-content animate">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="./img/fav.png" alt="Avatar" class="avatar">
+        <img src="../img/fav.png" alt="Avatar" class="avatar" width="5" height="250">>
       </div>
   
       <div class="container">
@@ -172,7 +172,7 @@ input[type=text], input[type=password] {
     <form class="modal-content animate">
       <div class="imgcontainer">
         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-        <img src="./img/fav.png" alt="Avatar" class="avatar">
+        <img src="../img/fav.png" alt="Avatar" class="avatar"  width="5" height="250">
       </div>
   
       <div class="container">
@@ -203,6 +203,9 @@ input[type=text], input[type=password] {
 		<label for="type">Type: </label>
 			  <input type="radio" name="type" required> Volunteer
               <input type="radio" name="type" required> Individual victim
+      <br><br>
+      <input id="terms" type="checkbox" name="file" required>
+      <label for="terms">I agree to the <a href="./terms.html">Terms and Conditions</a></label>
 			 
 	    <button type="submit" onclick = "validateVb()">Signup</button>
 		
@@ -257,7 +260,7 @@ input[type=text], input[type=password] {
 	if (!mail.match(maill)) 
 	{
 			alert("Enter a valid email address");
-	 }
+	}
 		
 	if (!psw2.match(pwd)) {
 	alert("Enter the same password in the retype password section");
@@ -266,8 +269,8 @@ input[type=text], input[type=password] {
 	 
 	if(this.files[0].size > 2097152){
 		   alert("File is too big!");
-		   this.value = "";
-	    }
+		   this.value ="";
+	}
 
 }	
   // Get the modal
